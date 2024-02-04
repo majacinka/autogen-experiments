@@ -59,8 +59,3 @@ def append_text_to_notion_page(page_id, text):
     except Exception as e:  
         logging.error(f"An unexpected error occurred: {e}")  
   
-# The text to be appended  
-text_to_append = "Eurovision 2024 will be a mess"  
-  
-# Append the text to the Notion page  
-append_text_to_notion_page(page_id, text_to_append)  
