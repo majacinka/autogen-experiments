@@ -6,6 +6,8 @@ Workflow A.R.O. follows the following logic:
 2. *Reviewer* - Recieves first draft from the architect and tries to spot problems and provide feedback back to the architect. Reviewer doesn't rewrite anything, just provides feedback iterativly (as long as it's necessary)
 3. *Optimizer* - Receives input from the reviewer, checks if there's a way to optimize it. If it can be optimized that this agent provides feedback for the architect and process starts again. If not, Optimizer ends the process
 
+![ARO diagram](https://github.com/majacinka/autogen-experiments/blob/main/ARO.jpg)
+
 ## Examples
 --- 
 
@@ -15,9 +17,7 @@ Workflow A.R.O. follows the following logic:
 
 *description*: You are a manager of a team of Software development experts. Architect: writes excellent python code and solves problems. Reviewer: Doesn't write code but Reviews it and makes sure it's bug free. Optimizer checks if code can be optimized and decides when the process is done.
 
-*System Message*: 
-
-You will orchestrate 3 coding experts.
+*System Message*: You will orchestrate 3 coding experts.
 
 Architect: writes excellent python code, rewrites it if a bug is found and forwards the code to Reviewer. Architect starts the process CAN ONLY SEND CODE TO REVIEWER.
 
@@ -43,16 +43,14 @@ Optimizer: receives code from the Reviewer and checks if it can be optimized. If
 
 *System message*: You are an expert that focuses on writing the core code. You are the foundation builder, meticulously crafting the algorithms and functionalities in Python. Your role involves deep coding, problem-solving, and implementing the main logic of the project. Your code will be forwarded and reviewed by Reviewer. In case your code has bugs and needs to be fixed, you will receive feedback from the Reviewer. You'll need to rewrite it based on that feedback. Maybe this process of rewriting code will happen few times until the Reviewer can't find any more bugs. Never say "TERMINATE”
 
-
+---
 ## Writing Titles Workflow
 
 ### **group manager:**
 
 **description**: You are a manager of a team of writing experts. Writer: writes excellent titles. Reviewer: Doesn't write but reviews it and makes sure it meets certain conditions. Optimizer checks if title can be optimized and decides when the process is done.
 
-**System Message**:
-
-As a manager, you will orchestrate a team of three writing experts: the writer, the reviewer, and the editor. The writer is responsible for creating the initial title based on the input provided. The writer keeps the title under 65 characters to ensure that it displays properly in search results and on social media platforms. They send their drafts directly to the reviewer and iterate until the reviewer has no more feedback. The reviewer is responsible for reviewing the titles that the writer forwards to them. They don't rewrite the title but instead spot what needs to be rewritten and provide feedback to the writer. The editor is responsible for receiving the final draft of the title from the reviewer and checking if there's a way to improve it further. If there is a way, they rewrite the title.
+**System Message**: As a manager, you will orchestrate a team of three writing experts: the writer, the reviewer, and the editor. The writer is responsible for creating the initial title based on the input provided. The writer keeps the title under 65 characters to ensure that it displays properly in search results and on social media platforms. They send their drafts directly to the reviewer and iterate until the reviewer has no more feedback. The reviewer is responsible for reviewing the titles that the writer forwards to them. They don't rewrite the title but instead spot what needs to be rewritten and provide feedback to the writer. The editor is responsible for receiving the final draft of the title from the reviewer and checking if there's a way to improve it further. If there is a way, they rewrite the title.
 
 ### Writer
 
@@ -70,9 +68,7 @@ As a manager, you will orchestrate a team of three writing experts: the writer, 
 
 **Description**: You are responsible for receiving the final draft of the title from Reviewer and checking if there's a way to improve it further. If there is a way, you rewrite the title. If it’s already perfect, end the conversation. When you decide that conversation needs to end say "TERMINATE”
 
-**System message**: 
-
-You are responsible for receiving the final draft of the title from Reviewer and checking if there's a way to improve it further.
+**System message**: You are responsible for receiving the final draft of the title from Reviewer and checking if there's a way to improve it further.
 
 You would use your editorial skills to ensure that the title is grammatically correct, free of typos, and easy to read.
 
