@@ -1,4 +1,4 @@
-# Experiments with Autogen Studio
+# Self-Improving Agents in Autogen Studio
 
 Workflow A.R.O. follows the following logic:
 
@@ -8,7 +8,19 @@ Workflow A.R.O. follows the following logic:
 
 ![ARO diagram](https://github.com/majacinka/autogen-experiments/blob/main/ARO.jpg)
 
-## Examples
+## Model Peformance
+
+| Model Name                                     | Can it WRITE a skill | Can it USE a skill |
+|------------------------------------------------|----------------------|--------------------|
+| gpt-4-turbo-preview                            | ✔︎                   | ✔︎                 |
+| mistral-medium                                 | ✔︎                   | ✔︎                 |
+| CodeLlama-function-calling-6320-7b-Instruct-GGUF| ✗                   | TBD                |
+| Trelis-Llama-2-7b-chat-hf-function-calling-v2-GGUF | ✗                | ✔︎                 |
+| airoboros-mistral2.2-7b                        | ✗                   | ✗                  |
+
+
+
+## Prompt Examples
 --- 
 
 ## Code Generation Workflow
